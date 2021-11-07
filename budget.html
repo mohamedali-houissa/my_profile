@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Beyond Retro - My Budget</title>
+    
+</head>
+<body style="margin: 0;">
+    <header class="track gr">
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html"><img src="./img/logo-beyond-retro.png" class="logo-left" alt="Home"></a>
+                </li>
+                <li>
+                    <button class="nextBtn_Light"><a href="./mystyle.html">NEXT</a></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="./img/Group 32.png" alt="">
+            <h1 class="hero_Title">MY BUDGET</h1>
+        </div>
+        <section class="size-select">
+        <div class="size-select_intro">
+            <h3>WHAT ARE YOUR BUDGETS?</h3>
+        </div>
+        <div class="size-select_body">
+            <div class="selection">
+                <h4>Dress</h4>
+                <div class="wrapper">
+                  <div class="values">
+                      <span id="range1">
+                          200
+                      </span>€
+                      <span> &dash; </span>
+                      <span id="range2">
+                          400
+                      </span>€
+                  </div>
+                  <div class="container">
+                      <div class="slider-track"></div>
+                      <input type="range" min="0" max="600" value="200" id="slider-1" oninput="slideOne()">
+                      <input type="range" min="0" max="600" value="400" id="slider-2" oninput="slideTwo()">
+                  </div>
+              </div>
+            </div>
+            <div class="selection">
+                <h4>Bottom</h4>
+                <div class="wrapper">
+                  <div class="values">
+                      <span id="range3">
+                          200
+                      </span>€
+                      <span> &dash; </span>
+                      <span id="range4">
+                          400
+                      </span>€
+                  </div>
+                  <div class="container">
+                      <div class="slider-track"></div>
+                      <input type="range" min="0" max="600" value="200" id="slider-3" oninput="slideThree()">
+                      <input type="range" min="0" max="600" value="400" id="slider-4" oninput="slideFour()">
+                  </div>
+              </div>
+            </div>
+            <div class="selection">
+                <h4>Shoes</h4>
+                  <div class="wrapper">
+                    <div class="values">
+                        <span id="range5">
+                            200
+                        </span>€
+                        <span> &dash; </span>
+                        <span id="range6">
+                            400
+                        </span>€
+                    </div>
+                    <div class="container">
+                        <div class="slider-track"></div>
+                        <input type="range" min="0" max="600" value="200" id="slider-5" oninput="slideFive()">
+                        <input type="range" min="0" max="600" value="400" id="slider-6" oninput="slideSix()">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <button class="nextBtn_Dark"><a href="./mystyle.html">Next</a></button>
+        </div>
+        </section>
+    </main>
+    <script>window.onload = function(){
+      slideOne();
+      slideTwo();
+      slideThree();
+      slideFour();
+      slideFive();
+      slideSix();
+    }
+    
+    let sliderOne = document.getElementById("slider-1");
+    let sliderTwo = document.getElementById("slider-2");
+    let sliderThree = document.getElementById("slider-3");
+    let sliderFour = document.getElementById("slider-4");
+    let sliderFive = document.getElementById("slider-5");
+    let sliderSix = document.getElementById("slider-6");
+    let displayValOne = document.getElementById("range1");
+    let displayValTwo = document.getElementById("range2");
+    let displayValThree = document.getElementById("range3");
+    let displayValFour = document.getElementById("range4");
+    let displayValFive = document.getElementById("range5");
+    let displayValSix = document.getElementById("range6");
+    let minGap = 0;
+    let sliderTrack = document.querySelector(".slider-track");
+    let sliderMaxValue = document.getElementById("slider-1").max;
+    
+    
+    function slideOne(){
+      if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+          sliderOne.value = parseInt(sliderTwo.value) - minGap;
+      }
+      displayValOne.textContent = sliderOne.value;
+      
+    }
+    function slideTwo(){
+      if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+          sliderTwo.value = parseInt(sliderOne.value) + minGap;
+      }
+      displayValTwo.textContent = sliderTwo.value;
+      
+    }
+    function slideThree(){
+      if(parseInt(sliderFour.value) - parseInt(sliderThree.value) <= minGap){
+          sliderThree.value = parseInt(sliderFour.value) - minGap;
+      }
+      displayValThree.textContent = sliderThree.value; 
+    }
+    function slideFour(){
+      if(parseInt(sliderFour.value) - parseInt(sliderThree.value) <= minGap){
+          sliderFour.value = parseInt(sliderThree.value) + minGap;
+      }
+      displayValFour.textContent = sliderFour.value;
+    }
+    function slideFive(){
+      if(parseInt(sliderSix.value) - parseInt(sliderFive.value) <= minGap){
+          sliderFive.value = parseInt(sliderSix.value) - minGap;
+      }
+      displayValFive.textContent = sliderFive.value; 
+    }
+    function slideSix(){
+      if(parseInt(sliderSix.value) - parseInt(sliderFive.value) <= minGap){
+          sliderSix.value = parseInt(sliderFive.value) + minGap;
+      }
+      displayValSix.textContent = sliderSix.value;
+    }
+    
+    
+    </script>
+</body>
+</html>

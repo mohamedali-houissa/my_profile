@@ -1,58 +1,852 @@
-
-body {
-  background-color: rgb(230, 230, 230);
-   font-family: 'Lato', sans-serif;
+:root {
+    --clr-text: ;
+    --clr-primary: ;
+    --clr-primary-dark: ;
+    --clr-accent: ;
+    --clr-accent-dark: ;
   
-  
-} 
-
-h1,h2 {
-
-  font-family: courier;
-}
-h1 {
-  color: royalblue;
-}
-h2 {
-  color: darkblue;
-}
-img{
-  border-radius: 50%;
-  height: 180px;
-  width: 180px;
-  border:  5px black;
-}
-ul{
-  -webkit-appearance: none;
-}
-li{
-  -webkit-appearance: none;
-}
-
-.container {
-  width: 700px;
-  margin: 40px auto;
-}
-
-@media (max-width: 760px) {
-  .container {
-    width: 600px;  
-    }
-}
-
-
-@media (max-width: 500px) {
-  .container {
-    width: 400px;  
-    }
-}
-
-
-.card-white {
-  background-color: white;
-  padding: 40px;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
-  border-radius: 4px;
-  margin: 20px 0px;
-  text-align: center;
+    --ff-title: ;
+    --ff-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+      Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --ff-logo: ;
   }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-family: var(--ff-sans);
+    color: var(--clr-text);
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  Image {
+    display: block;
+    max-width: 100%;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 3em 1em;
+  }
+  main{
+      width: auto;
+  }
+  
+  /* Typography */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+  
+  h2,
+  h3 {
+    font-family: var(--ff-title);
+    line-height: ;
+  }
+  
+  h2 {
+    font-size: 3rem;
+  }
+  
+  p {
+    margin-bottom: 0.85rem;
+  }
+  
+  p:last-child{
+    margin-bottom: 0;
+  }
+  
+  .text-primary{
+    color: var(--clr-primary);
+  }
+  
+  .logo {
+    font-family: var(--ff-logo);
+    text-align: center;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+
+  .stroke{
+    text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+  }
+  
+  /* Navigation */
+  
+  header {
+    padding: 1em 0 2em;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  nav a {
+    display: inline-block;
+    padding: 0.5em;
+    color: var(--clr-primary);
+  }
+  nav a:hover,
+  nav a:focus {
+    color: var(--clr-accent);
+    text-decoration: underline white;
+  }
+
+  li{
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .nav-links{
+      font-size: 1em;
+  }
+
+  .li1{
+      color: #FF3F45;
+  }
+  .li1:hover{
+      border-radius: 25px;
+      background-color: #FF3F45;
+      padding: 0.5rem 2rem;
+      color: white
+  }
+  .li2{
+      color: #60B576;
+  }
+
+  .li2:hover{
+    border-radius: 25px;
+    background-color: #60B576;
+    padding: 0.5rem 2rem;
+    color: white
+}
+
+  .li3{
+      color: #F0B9BF;
+  }
+
+  .li3:hover{
+    border-radius: 25px;
+    background-color: #F0B9BF;
+    padding: 0.5rem 2rem;
+    color: white
+}
+
+  .li4{
+      color: #F2CD00;
+  }
+
+  .li4:hover{
+    border-radius: 25px;
+    background-color: #F2CD00;
+    padding: 0.5rem 2rem;
+    color: white
+}
+
+  .logoImg{
+      max-width: 180px;
+  }
+
+  .log-btn{
+      position: absolute;
+      left: 85%;
+      top:3%;
+      padding: 0.5rem 2rem;
+      background-color: #FF3F45;
+      color: #FFF;
+      border-radius: 5px;
+  }
+
+  .log-btn:hover{
+      background-color: white;
+      color: #FF3F45 ;
+      border: 1px solid #FF3F45;
+  }
+
+  
+  /* Buttons */
+  
+  /* Background image */
+  .bg-image {
+    outline: 2px solid black;
+    padding: 20em;
+    background-color: black;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background attachment pour faire un effet paralaxe */
+    background-attachment: fixed;
+  }
+  
+  
+  /* media queries */
+  
+  @media only screen and (min-width:750px){
+    section{
+      padding: 6em 1em;
+  
+    }
+  }
+
+
+  /* index page */
+
+  .img-center{
+    position:absolute;  
+    width: 80%;
+    z-index: -1;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+  }
+
+  .textintro{
+      background-color: #f3d6d6d8;
+      padding: 1rem 2rem;
+      color: #AE4949;
+      position: relative;
+      top: 30%
+  }
+
+  .intro-title{
+      text-align: center;
+      color: #FF3F45;
+  }
+
+  .home_body{
+      display: flex;
+      justify-content: center;
+  }
+
+  .home-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .experience{
+      position: relative;
+      top: 400%;
+      background-color: #F0B9BF;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 1rem 2rem 0.5rem;
+  }
+
+  .experience:hover{
+      font-size: 1rem;
+      background-color: #FF3F45;
+      color: white;
+  }
+
+  button{
+    all: unset;
+   
+    padding: 1rem 2rem;
+  }
+
+  /* about page */
+  .about-us{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about-intro_ttl{
+      color: #F0B9BF;
+  }
+
+  .about-us_body{
+     width: 40%;
+  }
+
+  .about-us_img{
+      width: 40%;
+  }
+
+  .paraText{
+      width: 50ch;
+      text-align: justify;
+      line-height: 175%;
+      background-image: url("./img/star.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      padding: 3rem 0rem;
+  }
+  .paraText-ps{
+      width: 30ch;
+      text-align: justify;
+      line-height: 175%
+  }
+
+  .ps_content{
+background-image: url("./img/star2.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+height: 100%;
+padding: 6rem 3rem 4rem;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 0;
+transform: translate(-30%, -15%);
+  }
+
+  .divider{
+      margin-bottom: 3rem;
+  }
+
+  .team-ttl{
+      color:#F2CD00
+  }
+
+  .our-team_intro{
+width: 25%;
+text-align: center;
+  }
+
+  .our-team{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .our-team_body{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 15%;
+  }
+
+  .our-team-div{
+      margin-bottom: 3rem;
+  }
+
+  .team-member_img{
+      width: 250px;
+  }
+
+  .style_img{
+      width: 500px;
+      margin-bottom:0.5rem
+  }
+
+  .team-name{
+      font-size: 2.2rem;
+      color:#F0B9BF;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      margin-top: 2.5rem;
+      letter-spacing: 2.5px;
+  }
+
+
+  /* personal shopper */
+
+  .perso-shop{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ps_intro{
+      width: 40%;
+  }
+
+  .subtitle-ps{
+      text-align: center;
+      margin-bottom: 25%;
+  }
+
+  .ps_body{
+      display: flex;
+      justify-content: space-around;
+      align-items:flex-start;
+  }
+
+  .ps-img{
+      width: 60%;
+      transform: translateX(4%);
+  }
+
+  .btn_ps{
+      margin-top: 2rem;
+      padding: 1rem 2rem 0.5rem;
+      background-color: #F0B9BF;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+  }
+  .btn_ps:hover{
+    
+        font-size: 1rem;
+        background-color: #FF3F45;
+        color: white;
+    
+  }
+
+  
+ 
+
+  .div_btn{
+     
+      color: white;
+      background-color: white;
+      border-style:groove;
+      border: 1px solid white
+  }
+
+  /* size & budget */
+
+  .track{
+      width: 100%;
+      background-color: #f2ce0085;
+      padding: 0.5rem 2rem;
+  }
+
+  .gr{
+    background-color:#60b57785;
+  }
+  .pk{
+    background-color:#F0B9BF;
+  }
+
+  .track ul{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo-left{
+      height: 6rem;
+      margin: 0;
+      border-radius: 35px;
+      cursor: pointer;
+  }
+
+  .size-select{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .size-select_intro{
+width: 40%;
+text-align: center;
+  }
+
+  .nextBtn_Light{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      padding:  0.5rem 2rem;
+  }
+
+  .nextBtn_Light:hover{
+    background-color: #FF3F45;
+      color: #FFF;
+  }
+
+  .hero img{
+      width: 20%;
+      height:40%;
+      transform: translateY(-5%);
+  }
+
+  .hero {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+  }
+
+  .select-btn{
+      width: 3rem;
+      height:3rem;
+      padding: 0;
+      border: 1px solid black;
+      border-radius: 50%;
+      text-align: center;
+      margin-top: 1.5rem;
+  }
+
+  .select-btn:hover{
+      background-color: #F2CD00;
+      border: 1px solid #F2CD00;
+      color: white;
+  }
+  .select-btn:active{
+      background-color: #F2CD00;
+      border: 1px solid #F2CD00;
+      color: white;
+  }
+
+.selection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.nextBtn_Dark{
+    background-color: black;
+    color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      padding:  0.5rem 2rem;
+}
+
+.nextBtn_Dark:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black; 
+}
+
+.size-select_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero_Title{
+    position: absolute;
+    color: #FFF;
+    font-size: 4vw;
+    width: 6ch;
+    text-align: center;
+    margin-top: 10%;
+}
+
+/* contact page */
+.contact{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.contact_img{
+    margin-top: 4rem;
+}
+
+.contact_title{
+    color: #F2CD00;
+    text-align: center;
+}
+
+.contact_body{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info{
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.divTtl{
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.social-ico{
+    display: flex;
+    gap:1rem
+}
+
+.mailLink:hover{
+    color: #FF3F45;
+    text-decoration: underline solid;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.loginForm input{
+    all:unset;
+    margin: 0.7rem 0;
+    border-radius: 25px;
+    border: 1px solid #F2CD00;
+    width: 30ch;
+    padding: 1rem 2rem;
+}
+.loginForm input:hover{
+    border: 1px solid #FF3F45;
+}
+
+form textarea{
+    all:unset;
+    margin-top: 0.7rem;
+    border-radius: 25px;
+    border: 1px solid #F2CD00;
+    width: 30ch;
+    padding: 1rem 2rem;
+}
+form textarea:hover{
+    border: 1px solid #FF3F45;
+}
+
+.sbmtBtn{
+    border-radius: 25px;
+    background-color: #F2CD00;
+    color: #FFF;
+    font-weight: bold;
+    margin: 1rem ;
+    padding: 0.5rem 3rem;
+}
+
+.sbmtBtn:hover{
+    background-color: #FF3F45;
+}
+
+/* login overlay */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  .overlayCard{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+  }
+
+  .loginForm{
+      padding: 2rem 2rem;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      min-width: fit-content;
+      border-radius: 5px;
+      z-index: 5;
+  }
+
+  .quitsvg{
+      width: 24px;
+      color: black;
+  }
+  .quitForm{
+     position:relative;
+     left:40%;
+     top: 10%;
+  }
+
+  .relog:hover{
+text-decoration:underline;
+color:#FF3F45
+  }
+
+.styleCat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0rem 0 3rem;
+}
+
+  /* sliders */
+  .wrapper{
+    position: relative;
+    width: 95vmin;
+    background-color: white;
+    padding: 40px 40px 10px 40px;
+    border-radius: 10px;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 0px;
+}
+input[type="range"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+.slider-track{
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #60B576;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    height: 5px;
+}
+input[type="range"]::-moz-range-track{
+    -moz-appearance: none;
+    height: 5px;
+}
+input[type="range"]::-ms-track{
+    appearance: none;
+    height: 5px;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 1.7em;
+    width: 1.7em;
+    background-color: #60B576;
+    border: 3px solid white;
+    cursor: pointer;
+    margin-top: -9px;
+    pointer-events: auto;
+    border-radius: 50%;
+}
+input[type="range"]::-moz-range-thumb{
+    -webkit-appearance: none;
+    height: 1.7em;
+    width: 1.7em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #60B576;
+    border: 3px solid white;
+    pointer-events: auto;
+}
+input[type="range"]::-ms-thumb{
+    appearance: none;
+    height: 1.7em;
+    width: 1.7em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #60B576;
+    border: 3px solid white;
+    pointer-events: auto;
+}
+input[type="range"]:active::-webkit-slider-thumb{
+    background-color: #60B576;
+    border: 3px solid white;
+}
+.values{
+    background-color: #60B576;
+    width: 30%;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+/* star component */
+/*some basic styles*/
+.rating {font-size:0;display:inline-block}
+.rating__button {width:24px;height:24px;display:inline-block}
+.rating__star {width:100%;height:100%;fill:#fff}
+
+/*intial hover state*/
+.rating:hover .rating__star,
+/*preserve state after rating the first time*/
+.rating.has--rating .rating__star {fill:#F0B9BF}
+
+/*intial hover state*/
+.rating__button:hover ~ .rating__button .rating__star,
+/*preserve state after rating the first time*/
+.rating__button.is--active ~ .rating__button .rating__star {fill:#fff}
+
+/*SUBSEQUENT RATING ATTEMPTS LOGIC*/
+
+/*
+  lightgray signifies that you're giving a lower rating than before.
+	we're gonna make lightgray all the stars that the user takes away.
+*/
+.rating.has--rating:hover .rating__button:hover ~ .rating__button .rating__star {fill:lightgray}
+
+/*make everything after the current active star orange*/
+.rating.has--rating:hover .rating__button.is--active ~ .rating__button .rating__star {fill:#F0B9BF}
+
+/*make everything after the currently hovered star white*/
+.rating.has--rating:hover .rating__button:hover ~ .rating__button.is--active ~ .rating__button .rating__star,
+.rating.has--rating:hover .rating__button.is--active:hover ~ .rating__button .rating__star,
+.rating.has--rating:hover .rating__button.is--active ~ .rating__button:hover ~ .rating__button .rating__star {fill:#fff}

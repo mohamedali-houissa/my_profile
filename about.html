@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome at Beyond Retro</title>
     <link rel="stylesheet" href="style.css">
     <script src="./script.js"></script>
+    <title>Beyond Retro - About Us</title>
 </head>
 <body>
     <header>
@@ -66,19 +66,30 @@
         <button class="log-btn" onclick="on()">login</button>
     </header>
     <main>
-        <h2 class="intro-title stroke">
-            MEET  YOUR  TIMELESS  STYLE
-        </h2>
-        <section class="home_body">
-            <img src="./img/Group 30.png" class="img-center" alt="">
-            <div class="home-content">
-                <div class="textintro">
-                    <h3>SUSTAINABLE CLOTHES CAREFULLY SELECTED BY YOUR PERSONAL SHOPPER</h3>
+        <section class="about-us">
+            <div class="about-us_body">
+                <h2 class="about-intro_ttl stroke">ABOUT US</h2>
+                <hr class="divider">
+                <p class="paraText">Beyond Retro has been created in 2021 by 4 students, coming from IESEG Paris.
+                    We are all four passionated about fashion and styling. We have at heart to raise awareness about the dangers of fast fashion, and to encourage small sustainable business and second hand stores. We have created a real universe for the brand, an environment in which customers feel comfortable. We want customers to reinvent themselves through Beyond Retro. 
+                    </p>
+            </div>
+            <img src="./img/boutimg.jpg" class="about-us_img" alt="">
+        </section>
+        <section class="our-team" id="psteam">
+            <div class="our-team_intro">
+                <h2 class="team-ttl stroke">OUR TEAM</h2>
+                <hr class="divider our-team-div">
+            </div>
+            <div class="our-team_body">
+                <div class="team-member"><h3 class="team-name stroke"> <a href="https://margauxgnrd.github.io/Margauxgnrd/" target="_blank"> MARGAUX </a>
+                </h3><img src="./img/margaux.png" class="team-member_img" 
+                alt="">
                 </div>
-                <button class="experience">
-                    <a href="./sizes.html">START THE EXPERIENCE</a>
-                    <hr class="div_btn"/>
-                </button>
+                <div class="team-member"><h3 class="team-name stroke"> <a href="https://capucine-doussy.github.io/my-profile/" target="_blank"> CAPUCINE </a></h3><img src="./img/capucine.png" class="team-member_img" alt=""></div>
+                <div class="team-member"><h3 class="team-name stroke"><a href="https://mohamedali-houissa.github.io/my_profile/
+                " target="_blank"> DALI </a></h3><img src="./img/dali.png" class="team-member_img" alt=""></div>
+                <div class="team-member"><h3 class="team-name stroke"> <a href="https://constancelds.github.io/profile/" target="_blank"> CONSTANCE</a></h3><img src="./img/constance.png" class="team-member_img" alt=""></div>
             </div>
         </section>
         <div id="overlay"  >
@@ -92,11 +103,10 @@
                     <input type="text" name="" id="" placeholder="How did you hear from us ?">
                     <input type="text" placeholder="Refferal code">
                     <div class="sbmtBtn" type="submit" onclick="off()">Next</div>
-                    <p>You already have an account? <a class="relog"  href="">Connect here</a></p>
+                    <p>You already have an account? <a class="relog"  href="#">Connect here</a></p>
                 </form>
             </div>
         </div>
     </main>
 </body>
 </html>
-

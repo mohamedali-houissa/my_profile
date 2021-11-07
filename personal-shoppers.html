@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome at Beyond Retro</title>
     <link rel="stylesheet" href="style.css">
     <script src="./script.js"></script>
+    <title>Beyond Retro - Personal Shoppers</title>
 </head>
 <body>
     <header>
@@ -66,22 +66,25 @@
         <button class="log-btn" onclick="on()">login</button>
     </header>
     <main>
-        <h2 class="intro-title stroke">
-            MEET  YOUR  TIMELESS  STYLE
-        </h2>
-        <section class="home_body">
-            <img src="./img/Group 30.png" class="img-center" alt="">
-            <div class="home-content">
-                <div class="textintro">
-                    <h3>SUSTAINABLE CLOTHES CAREFULLY SELECTED BY YOUR PERSONAL SHOPPER</h3>
-                </div>
-                <button class="experience">
-                    <a href="./sizes.html">START THE EXPERIENCE</a>
-                    <hr class="div_btn"/>
-                </button>
+        <section class="perso-shop">
+            <div class="ps_intro">
+                <h2 class="intro-title stroke">PERSONAL SHOPPERS</h2>
+                <hr>
+                <h3 class="subtitle-ps">What is the role of a Personal Shopper?</h3>
             </div>
-        </section>
-        <div id="overlay"  >
+            <div class="ps_body">
+                <img src="./img/Group 33.png" class="ps-img" alt="">
+                <div class="ps_content">
+                    <p class="paraText-ps">A personal shopper is someone wishing to help individuals to purchase clothes, either by accompanying them while shopping or by shopping on their behalf, according to their needs, tastes and wants.
+                    </p>
+                </div>
+            </div>
+            <button class="btn_ps">
+                <a href="./about.html#psteam">DISCOVER OUR PERSONAL SHOPPERS</a>
+                <hr class="div_btn">
+            </button>
+           </section>
+           <div id="overlay"  >
             <div class="overlayCard">
                 <form action="login" class="loginForm" > 
                     <btn class="quitForm" ><img class="quitsvg" src="./img/times-circle-regular.svg" alt="" onclick="off()"></btn>
@@ -97,6 +100,6 @@
             </div>
         </div>
     </main>
+
 </body>
 </html>
-
